@@ -1,0 +1,521 @@
+<history xmlns='http://exampleNamespace.org/XMLTech'>
+
+	<leagues>
+		<league league_id="premierLeague" nationality="England">Premier League</league>
+		<league league_id="laLigaSantander" nationality="Spain">La Liga Santander</league>
+		<league league_id="serieA" nationality="Italy">Serie A</league>
+		<league league_id="bundesliga" nationality="Germany">Bundesliga</league>
+		<league league_id="nos" nationality="Portugal">Liga NOS</league>
+		<league league_id="priemjer-liga" nationality="Russia">Priemjer-Liga</league>
+		<league league_id="premierLiha" nationality="Ukraine">Premier Liha</league>
+		<league league_id="scottishPremierLeague" nationality="Scotland">Premier Liha</league>
+		<league league_id="eredivisie" nationality="Netherlands">Eredivisie</league>
+      	<league league_id="ligueUne" nationality="France">Ligue 1</league>
+	</leagues>
+
+	<clubs>
+		<club club_id="barcelona" league="laLigaSantander">
+			<name>Barcelona</name>
+		</club>
+		<club club_id="manchesterUnited" league="premierLeague">
+			<name>Manchester United</name>
+		</club>
+		<club club_id="chelsea" league="premierLeague">
+			<name>Chelsea F.C.</name>
+		</club>
+		<club club_id="interMilan" league="serieA">
+			<name>Inter Mediolan</name>
+		</club>
+		<club club_id="bayernMunchen" league="bundesliga">
+			<name>Bayern Munchen</name>
+		</club>
+		<club club_id="borussiaDortmund" league="bundesliga">
+			<name>Borussia Dortmund</name>
+		</club>
+      	<club club_id="realMadrid" league="laLigaSantander">
+			<name>Real Madrid</name>
+		</club>
+      	<club club_id="atleticoMadrid" league="laLigaSantander">
+			<name>Atletico Madrid</name>
+		</club>
+      	<club club_id="juventus" league="serieA">
+			<name>Juventus F.C.</name>
+		</club>
+      	<club club_id="liverpool" league="premierLeague">
+			<name>Liverpool F.C.</name>
+		</club>
+		<club club_id="zenit" league="priemjer-liga">
+			<name>Zenit Saint Petersburg</name>
+		</club>
+		<club club_id="rangers" league="scottishPremierLeague">
+			<name>Rangers</name>
+		</club>
+      	<club club_id="shakhtarDonetsk" league="premierLiha">
+			<name>Shakhtar Donetsk</name>
+		</club>
+      	<club club_id="werderBremen" league="bundesliga">
+			<name>Werder Bremen</name>
+		</club>
+      	<club club_id="fulham" league="premierLeague">
+			<name>Fulham</name>
+		</club>
+      	<club club_id="porto" league="nos">
+			<name>Porto</name>
+		</club>
+      	<club club_id="braga" league="nos">
+			<name>Braga</name>
+		</club>
+      	<club club_id="athleticBilbao" league="laLigaSantander">
+			<name>Athletic Bilbao</name>
+		</club>
+      	<club club_id="benfica" league="nos">
+			<name>Benfica</name>
+		</club>
+      	<club club_id="sevilla" league="laLigaSantander">
+			<name>Sevilla</name>
+		</club>
+      	<club club_id="dnipro" league="premierLiha">
+			<name>Dnipro</name>
+		</club>
+      	<club club_id="ajax" league="eredivisie">
+			<name>Ajax</name>
+		</club>
+      	<club club_id="marseille" league="ligueUne">
+			<name>Marseille</name>
+		</club>
+	</clubs>
+  	<finals>
+      	<matches matches_id="championsLeague">
+			<description>Champions League finals from 2008 to 2018</description>
+			<match homeTeam="manchesterUnited" awayTeam="chelsea">
+				<goals penalties="true">
+					<normalTime>
+						<result score="home">1</result>
+						<result score="away">1</result>
+					</normalTime>
+					<penalties>
+						<result score="home">6</result>
+						<result score="away">5</result>
+					</penalties>
+				</goals>
+				<info>
+					<stadium>Luzhniki Stadium</stadium>
+					<date>2008-05-21</date>
+					<frequency>69552</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1911.00</payment>
+						<payment currency="USD">490.00</payment>
+						<payment currency="EUR">440.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="barcelona" awayTeam="manchesterUnited">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Stadio Olimpico</stadium>
+					<date>2009-05-27</date>
+					<frequency>72700</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">2000.00</payment>
+						<payment currency="USD">520.00</payment>
+						<payment currency="EUR">470.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="interMilan" awayTeam="bayernMunchen">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Santiago Bernabeu</stadium>
+					<date>2010-05-22</date>
+					<frequency>74954</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1810.00</payment>
+						<payment currency="USD">464.00</payment>
+						<payment currency="EUR">421.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="barcelona" awayTeam="manchesterUnited">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Wembley Stadium</stadium>
+					<date>2011-05-28</date>
+					<frequency>87695</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1620.00</payment>
+						<payment currency="USD">410.00</payment>
+						<payment currency="EUR">390.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="chelsea" awayTeam="bayernMunchen">
+				<goals penalties="true">
+					<normalTime>
+						<result score="home">1</result>
+						<result score="away">1</result>
+					</normalTime>
+					<penalties>
+						<result score="home">4</result>
+						<result score="away">3</result>
+					</penalties>
+				</goals>
+				<info>
+					<stadium>Allianz Arena</stadium>
+					<date>2012-05-19</date>
+					<frequency>62500</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">2200.00</payment>
+						<payment currency="USD">564.00</payment>
+						<payment currency="EUR">520.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="bayernMunchen" awayTeam="borussiaDortmund">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Wembley Stadium</stadium>
+					<date>2013-05-25</date>
+					<frequency>86298</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1721.00</payment>
+						<payment currency="USD">450.00</payment>
+						<payment currency="EUR">400.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="realMadrid" awayTeam="atleticoMadrid">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">4</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Estadio da Luz</stadium>
+					<date>2014-05-24</date>
+					<frequency>60976</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1532.00</payment>
+						<payment currency="USD">392.00</payment>
+						<payment currency="EUR">350.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="barcelona" awayTeam="juventus">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Olympiastadion</stadium>
+					<date>2015-06-06</date>
+					<frequency>70442</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">2132.00</payment>
+						<payment currency="USD">550.00</payment>
+						<payment currency="EUR">512.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="realMadrid" awayTeam="atleticoMadrid">
+				<goals penalties="true">
+					<normalTime>
+						<result score="home">1</result>
+						<result score="away">1</result>
+					</normalTime>
+					<penalties>
+						<result score="home">4</result>
+						<result score="away">3</result>
+					</penalties>
+				</goals>
+				<info>
+					<stadium>San Siro</stadium>
+					<date>2016-05-28</date>
+					<frequency>71942</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1923.00</payment>
+						<payment currency="USD">482.00</payment>
+						<payment currency="EUR">434.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="realMadrid" awayTeam="juventus">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">4</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Millenium Stadium</stadium>
+					<date>2017-06-03</date>
+					<frequency>87694</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1834.00</payment>
+						<payment currency="USD">429.00</payment>
+						<payment currency="EUR">399.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="realMadrid" awayTeam="liverpool">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Olympic Stadium</stadium>
+					<date>2018-05-26</date>
+					<frequency>70050</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">2500.00</payment>
+						<payment currency="USD">641.00</payment>
+						<payment currency="EUR">599.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+     	 </matches>
+		 
+		 <matches matches_id="europaLeague">
+			<description>Europa League Finals from 2008 to 2018</description>
+			<match homeTeam="zenit" awayTeam="rangers">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Etihad Stadium</stadium>
+					<date>2008-05-14</date>
+					<frequency>43878</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1200.00</payment>
+						<payment currency="USD">307.00</payment>
+						<payment currency="EUR">284.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="shakhtarDonetsk" awayTeam="werderBremen">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Sukru Saracoglu</stadium>
+					<date>2009-05-20</date>
+					<frequency>37357</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1134.00</payment>
+						<payment currency="USD">299.00</payment>
+						<payment currency="EUR">279.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="atleticoMadrid" awayTeam="fulham">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Hamburg Arena</stadium>
+					<date>2010-05-12</date>
+					<frequency>49000</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1099.00</payment>
+						<payment currency="USD">290.00</payment>
+						<payment currency="EUR">270.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="porto" awayTeam="braga">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">1</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Dublin Arena</stadium>
+					<date>2011-05-18</date>
+					<frequency>45391</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1000.00</payment>
+						<payment currency="USD">255.00</payment>
+						<payment currency="EUR">220.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="atleticoMadrid" awayTeam="athleticBilbao">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Sukru Saracoglu</stadium>
+					<date>2012-05-09</date>
+					<frequency>52347</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1132.00</payment>
+						<payment currency="USD">294.00</payment>
+						<payment currency="EUR">245.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="chelsea" awayTeam="benfica">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Amsterdam Arena</stadium>
+					<date>2013-05-15</date>
+					<frequency>46163</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1354.00</payment>
+						<payment currency="USD">348.00</payment>
+						<payment currency="EUR">320.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="sevilla" awayTeam="benfica">
+				<goals penalties="true">
+					<normalTime>
+						<result score="home">0</result>
+						<result score="away">0</result>
+					</normalTime>
+					<penalties>
+						<result score="home">4</result>
+						<result score="away">2</result>
+					</penalties>
+				</goals>
+				<info>
+					<stadium>Juventus Stadium</stadium>
+					<date>2014-05-14</date>
+					<frequency>33120</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1198.00</payment>
+						<payment currency="USD">300.00</payment>
+						<payment currency="EUR">283.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="sevilla" awayTeam="dnipro">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">2</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>National Stadium</stadium>
+					<date>2015-05-27</date>
+					<frequency>45000</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1050.00</payment>
+						<payment currency="USD">258.00</payment>
+						<payment currency="EUR">210.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="sevilla" awayTeam="liverpool">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">1</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>St. Jakob-Park</stadium>
+					<date>2016-05-18</date>
+					<frequency>34429</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1001.00</payment>
+						<payment currency="USD">230.00</payment>
+						<payment currency="EUR">199.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="manchesterUnited" awayTeam="ajax">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">2</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Friends Arena</stadium>
+					<date>2017-05-24</date>
+					<frequency>46961</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1265.00</payment>
+						<payment currency="USD">324.00</payment>
+						<payment currency="EUR">286.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+			<match homeTeam="atleticoMadrid" awayTeam="marseille">
+				<goals penalties="false">
+					<normalTime>
+						<result score="home">3</result>
+						<result score="away">0</result>
+					</normalTime>
+				</goals>
+				<info>
+					<stadium>Olympique Lyonnais</stadium>
+					<date>2018-05-16</date>
+					<frequency>55768</frequency>
+					<pricePerTicket>
+						<payment currency="PLN">1399.00</payment>
+						<payment currency="USD">358.00</payment>
+						<payment currency="EUR">321.00</payment>
+					</pricePerTicket>
+				</info>
+			</match>
+		 </matches>
+		 
+  	</finals>
+
+  <authors>
+	  <author album="210137">
+		<firstName>Jan</firstName>
+		<lastName>Arkuszyński</lastName>
+	  </author>
+      <author album="210264">
+		<firstName>Maciej</firstName>
+		<lastName>Majchrowski</lastName>
+	  </author>
+  </authors>
+  
+</history>
