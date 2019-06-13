@@ -11,7 +11,6 @@
     <league league_id="scottishPremierLeague" nationality="Scotland">Premier Liha</league>
     <league league_id="eredivisie" nationality="Netherlands">Eredivisie</league>
     <league league_id="ligueUne" nationality="France">Ligue 1</league>
-    <league league_id="amerika" nationality="US">MLS</league>
   </leagues>
   <clubs>
     <club club_id="barcelona" league="laLigaSantander">
@@ -82,9 +81,6 @@
     </club>
     <club club_id="marseille" league="ligueUne">
       <name>Marseille</name>
-    </club>
-    <club club_id="laGalaxy" league="amerika">
-      <name>LA Galaxy</name>
     </club>
   </clubs>
   <finals>
@@ -502,28 +498,6 @@
             <payment currency="PLN">1399.00</payment>
             <payment currency="USD">358.00</payment>
             <payment currency="EUR">321.00</payment>
-          </pricePerTicket>
-        </info>
-      </match>
-      <match homeTeam="laGalaxy" awayTeam="chelsea">
-        <goals penalties="false">
-          <normalTime>
-            <result score="home">5</result>
-            <result score="away">6</result>
-          </normalTime>
-          <penalties>
-            <result />
-            <result />
-          </penalties>
-        </goals>
-        <info>
-          <stadium>Wembley Stadium</stadium>
-          <date>2019-06-14</date>
-          <frequency>44444</frequency>
-          <pricePerTicket>
-            <payment currency="PLN">2345.22</payment>
-            <payment currency="USD">2343.21</payment>
-            <payment currency="EUR">2453.21</payment>
           </pricePerTicket>
         </info>
       </match>

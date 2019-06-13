@@ -177,10 +177,8 @@
                             <th colspan="12"><xsl:value-of select="description"/></th>
                         </tr>
                         <tr>
-                            <th>Home  league</th>
                             <th>Home </th>
                             <th>Away</th>
-							 <th>Away  league</th>
                             <th>Home score</th>
                             <th>Away score</th>
                             <th>Home penalties</th>
@@ -193,10 +191,8 @@
                         <xsl:for-each select="singleMatch">
                             <!-- <xsl:sort select="matchInfo/frequency" order="ascending"/> -->
                             <tr>
-                                <td><xsl:value-of select="homeTeamLeague"/></td>
                                 <td><xsl:value-of select="homeTeamClub" /></td>
                                 <td><xsl:value-of select="awayTeamClub" /></td>
-                                <td><xsl:value-of select="awayTeamLeague" /></td>
                                 <td><xsl:value-of select="goalsInfo/normalTime/resultHomeTeam" /></td>
                                 <td><xsl:value-of select="goalsInfo/normalTime/resultAwayTeam" /></td>
 								<xsl:choose>

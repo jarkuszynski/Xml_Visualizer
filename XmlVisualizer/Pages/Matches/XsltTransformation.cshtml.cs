@@ -51,6 +51,7 @@ namespace XmlVisualizer.Pages.Matches
             XPathDocument mydata2 = new XPathDocument(workingDirectory + "\\wwwroot\\mock\\history_sum.xml");
             XmlWriter writer2 = new XmlTextWriter(workingDirectory + "\\wwwroot\\mock\\history_sum.xhtml", Encoding.UTF8);
             xsltXmlToXml.Transform(mydata2, null, writer2, null);
+            writer2.Close();
             return RedirectToPage("./Index");
         }
     }
