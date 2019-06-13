@@ -6,26 +6,31 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using AppModel.Model;
+using XmlVisualizer.Data;
 using XmlVisualizer.Models;
 
 namespace XmlVisualizer.Pages.Match
 {
     public class CreateModel : PageModel
     {
-        private readonly XmlVisualizer.Models.XmlVisualizerContext _context;
+        private readonly ModelContext _context;
 
-        public CreateModel(XmlVisualizer.Models.XmlVisualizerContext context)
+        public CreateModel(ModelContext context)
         {
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(string id)
         {
+            Matches_id = id;
             return Page();
         }
 
         [BindProperty]
-        public Match Match { get; set; }
+        public AppModel.Model.Match Match { get; set; }
+
+        [BindProperty]
+        public string Matches_id { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -33,11 +38,10 @@ namespace XmlVisualizer.Pages.Match
             {
                 return Page();
             }
+            Match.Id = Guid.NewGuid();
+            _context.History.Finals.Matches.Find(m => m.Matches_id == Matches_id).Match.Add(Match);
 
-            _context.Match.Add(Match);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new {id = Matches_id});
         }
     }
 }

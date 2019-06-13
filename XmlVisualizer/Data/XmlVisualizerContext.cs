@@ -17,5 +17,7 @@ namespace XmlVisualizer.Models
         public DbSet<AppModel.Model.Author> Author { get; set; }
 
         public DbSet<AppModel.Model.Match> Match { get; set; }
+
+        public DbSet<AppModel.Model.Matches> Matches { get; set; }
     }
 }

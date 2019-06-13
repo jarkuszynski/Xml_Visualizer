@@ -1,0 +1,16 @@
+﻿@page
+@model XmlVisualizer.Pages.Matches.XsltTransformationModel
+
+@{
+    ViewData["Title"] = "XsltTransformation";
+}
+
+<h2>Xslt Transformation</h2>
+
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Matches.Matches_id" />
+        <input type="submit" value="Transform" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

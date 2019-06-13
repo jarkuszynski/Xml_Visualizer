@@ -7,21 +7,24 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AppModel.Model;
+using XmlVisualizer.Data;
 using XmlVisualizer.Models;
 
 namespace XmlVisualizer.Pages.Match
 {
     public class EditModel : PageModel
     {
-        private readonly XmlVisualizer.Models.XmlVisualizerContext _context;
+        private readonly ModelContext _context;
 
-        public EditModel(XmlVisualizer.Models.XmlVisualizerContext context)
+        public EditModel(ModelContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public Match Match { get; set; }
+        public AppModel.Model.Match Match { get; set; }
+
+        [BindProperty] public string Matches_Id { get; set; }
 
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
@@ -30,7 +33,20 @@ namespace XmlVisualizer.Pages.Match
                 return NotFound();
             }
 
-            Match = await _context.Match.FirstOrDefaultAsync(m => m.Id == id);
+            AppModel.Model.Match temp = new AppModel.Model.Match();
+            foreach (AppModel.Model.Matches finalsMatch in _context.History.Finals.Matches)
+            {
+                temp = finalsMatch.Match.FirstOrDefault(m => m.Id == id);
+                if (temp != null)
+                {
+                    Matches_Id = finalsMatch.Matches_id;
+                    break;
+                }
+            }
+
+            Match = temp;
+
+
 
             if (Match == null)
             {
@@ -41,35 +57,17 @@ namespace XmlVisualizer.Pages.Match
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            foreach (AppModel.Model.Matches finalsMatch in _context.History.Finals.Matches)
             {
-                return Page();
-            }
-
-            _context.Attach(Match).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MatchExists(Match.Id))
+                int index = finalsMatch.Match.FindIndex(m => m.Id == Match.Id);
+                if (index != -1)
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
+                    finalsMatch.Match[index] = Match;
+                    break;
                 }
             }
 
-            return RedirectToPage("./Index");
-        }
-
-        private bool MatchExists(Guid id)
-        {
-            return _context.Match.Any(e => e.Id == id);
+            return RedirectToPage("./Index", new {id = Matches_Id});
         }
     }
 }

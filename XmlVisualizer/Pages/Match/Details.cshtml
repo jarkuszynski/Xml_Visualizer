@@ -23,9 +23,76 @@
         <dd>
             @Html.DisplayFor(model => model.Match.AwayTeam)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Match.Goals.NormalTime) <br />
+            Home Team score:
+        </dt>
+        <dd>
+            <br /> @Html.DisplayFor(model => model.Match.Goals.NormalTime.Result[0].Text)
+        </dd>
+        <dt>
+            Away Team score:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Goals.NormalTime.Result[1].Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Match.Goals.Penalties) <br />
+            Home Team score:
+        </dt>
+        <dd>
+            <br /> @Html.DisplayFor(model => model.Match.Goals.Penalties.Result[0].Text)
+        </dd>
+        <dt>
+            Away Team score:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Goals.Penalties.Result[1].Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Match.Info.Stadium)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Info.Stadium)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Match.Info.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Info.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Match.Info.Frequency)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Info.Frequency)
+        </dd>
+        <dt>
+            Price per ticket: <br />
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[0].Currency)
+
+        </dt>
+        <dd>
+            <br />
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[0].Text)
+        </dd>
+        <dt>
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[1].Currency)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[1].Text)
+        </dd>
+        <dt>
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[2].Currency)
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Match.Info.PricePerTicket.Payment[2].Text)
+        </dd>
     </dl>
 </div>
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Match.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" asp-route-id="@Model.Matches_Id">Back to List</a>
 </div>

@@ -9,7 +9,7 @@ using AppModel.Model;
 using XmlVisualizer.Data;
 using XmlVisualizer.Models;
 
-namespace XmlVisualizer.Pages.Match
+namespace XmlVisualizer.Pages.Matches
 {
     public class IndexModel : PageModel
     {
@@ -20,14 +20,11 @@ namespace XmlVisualizer.Pages.Match
             _context = context;
         }
 
-        public IList<AppModel.Model.Match> Match { get;set; }
-        public string Matches_id { get; set; }
+        public IList<AppModel.Model.Matches> Matches { get;set; }
 
-        public async Task OnGetAsync(string id)
+        public async Task OnGetAsync()
         {
-            Matches_id = id;
-
-            Match = _context.History.Finals.Matches.Find(m => m.Matches_id == id).Match;
+            Matches = _context.History.Finals.Matches;
         }
     }
 }

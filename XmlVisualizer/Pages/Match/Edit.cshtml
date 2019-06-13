@@ -23,7 +23,113 @@
                 <input asp-for="Match.AwayTeam" class="form-control" />
                 <span asp-validation-for="Match.AwayTeam" class="text-danger"></span>
             </div>
+
+            @*GOALS*@
+            @*NORMAL TIME*@
+            <div class="form-group">
+                <label asp-for="Match.Goals._Penalties" class="control-label">Penalties attribute (true/false)</label>
+                <input asp-for="Match.Goals._Penalties" class="form-control" />
+                <span asp-validation-for="Match.Goals._Penalties" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.NormalTime.Result[0].Score" class="control-label">Normal time team attribute (home/away)</label>
+                <input asp-for="Match.Goals.NormalTime.Result[0].Score" class="form-control" />
+                <span asp-validation-for="Match.Goals.NormalTime.Result[0].Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.NormalTime.Result[0].Text" class="control-label">Normal time team result</label>
+                <input asp-for="Match.Goals.NormalTime.Result[0].Text" class="form-control" />
+                <span asp-validation-for="Match.Goals.NormalTime.Result[0].Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.NormalTime.Result[1].Score" class="control-label">Normal time team attribute (home/away)</label>
+                <input asp-for="Match.Goals.NormalTime.Result[1].Score" class="form-control" />
+                <span asp-validation-for="Match.Goals.NormalTime.Result[1].Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.NormalTime.Result[1].Text" class="control-label">Normal time team result</label>
+                <input asp-for="Match.Goals.NormalTime.Result[1].Text" class="form-control" />
+                <span asp-validation-for="Match.Goals.NormalTime.Result[1].Text" class="text-danger"></span>
+            </div>
+
+            @*PENALTIES*@
+            <div class="form-group">
+                <label asp-for="Match.Goals.Penalties.Result[0].Score" class="control-label">Penalties team attribute (home/away)</label>
+                <input asp-for="Match.Goals.Penalties.Result[0].Score" class="form-control" />
+                <span asp-validation-for="Match.Goals.Penalties.Result[0].Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.Penalties.Result[0].Text" class="control-label">Penalties team result</label>
+                <input asp-for="Match.Goals.Penalties.Result[0].Text" class="form-control" />
+                <span asp-validation-for="Match.Goals.Penalties.Result[0].Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.Penalties.Result[1].Score" class="control-label">Penalties team attribute (home/away)</label>
+                <input asp-for="Match.Goals.Penalties.Result[1].Score" class="form-control" />
+                <span asp-validation-for="Match.Goals.Penalties.Result[1].Score" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Goals.Penalties.Result[1].Text" class="control-label">Penalties team result</label>
+                <input asp-for="Match.Goals.Penalties.Result[1].Text" class="form-control" />
+                <span asp-validation-for="Match.Goals.Penalties.Result[1].Text" class="text-danger"></span>
+            </div>
+
+            @*INFO*@
+
+            <div class="form-group">
+                <label asp-for="Match.Info.Stadium" class="control-label"></label>
+                <input asp-for="Match.Info.Stadium" class="form-control" />
+                <span asp-validation-for="Match.Info.Stadium" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Match.Info.Date" class="control-label">Date (YYYY-MM-DD)</label>
+                <input asp-for="Match.Info.Date" class="form-control" />
+                <span asp-validation-for="Match.Info.Date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Match.Info.Frequency" class="control-label"></label>
+                <input asp-for="Match.Info.Frequency" class="form-control" />
+                <span asp-validation-for="Match.Info.Frequency" class="text-danger"></span>
+            </div>
+
+            @*PRICE PER TICKET*@
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[0].Currency" class="control-label">Currency Type</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[0].Currency" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[0].Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[0].Text" class="control-label">Payment value</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[0].Text" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[0].Text" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[1].Currency" class="control-label">Currency Type</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[1].Currency" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[1].Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[1].Text" class="control-label">Payment value</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[1].Text" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[1].Text" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[2].Currency" class="control-label">Currency Type</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[2].Currency" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[2].Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Info.PricePerTicket.Payment[2].Text" class="control-label">Payment value</label>
+                <input asp-for="Match.Info.PricePerTicket.Payment[2].Text" class="form-control" />
+                <span asp-validation-for="Match.Info.PricePerTicket.Payment[2].Text" class="text-danger"></span>
+            </div>
+
             <input type="hidden" asp-for="Match.Id" />
+            <input type="hidden" asp-for="Matches_Id" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
@@ -32,7 +138,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" asp-route-id="@Model.Matches_Id">Back to List</a>
 </div>
 
 @section Scripts {

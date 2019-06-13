@@ -11,13 +11,15 @@ namespace XmlSer
 {
     public class Serializer
     {
-        private readonly XmlSerializer _serializer = new XmlSerializer(typeof(History), "http://exampleNamespace.org/XMLTech");
+        private readonly XmlSerializer _serializer = new XmlSerializer(typeof(History));
 
         public void Serialize(History history, string filePath)
         {
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("","");
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                _serializer.Serialize(stream, history);
+                _serializer.Serialize(stream, history, ns);
             }
         }
 

@@ -6,21 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AppModel.Model;
+using XmlVisualizer.Data;
 using XmlVisualizer.Models;
 
 namespace XmlVisualizer.Pages.Match
 {
     public class DeleteModel : PageModel
     {
-        private readonly XmlVisualizer.Models.XmlVisualizerContext _context;
+        private readonly ModelContext _context;
 
-        public DeleteModel(XmlVisualizer.Models.XmlVisualizerContext context)
+        public DeleteModel(ModelContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public Match Match { get; set; }
+        public AppModel.Model.Match Match { get; set; }
+
+        [BindProperty] public string Matches_Id { get; set; }
 
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
@@ -29,7 +32,18 @@ namespace XmlVisualizer.Pages.Match
                 return NotFound();
             }
 
-            Match = await _context.Match.FirstOrDefaultAsync(m => m.Id == id);
+            AppModel.Model.Match temp = new AppModel.Model.Match();
+            foreach (AppModel.Model.Matches finalsMatch in _context.History.Finals.Matches)
+            {
+                temp = finalsMatch.Match.FirstOrDefault(m => m.Id == id);
+                if (temp != null)
+                {
+                    Matches_Id = finalsMatch.Matches_id;
+                    break;
+                }
+            }
+
+            Match = temp;
 
             if (Match == null)
             {
@@ -45,15 +59,18 @@ namespace XmlVisualizer.Pages.Match
                 return NotFound();
             }
 
-            Match = await _context.Match.FindAsync(id);
 
-            if (Match != null)
+            foreach (AppModel.Model.Matches finalsMatch in _context.History.Finals.Matches)
             {
-                _context.Match.Remove(Match);
-                await _context.SaveChangesAsync();
+                Match = finalsMatch.Match.FirstOrDefault(m => m.Id == id);
+                if (Match != null)
+                {
+                    finalsMatch.Match.Remove(Match);
+                    break;
+                }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new { id = Matches_Id });
         }
     }
 }

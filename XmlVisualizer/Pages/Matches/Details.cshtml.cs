@@ -9,7 +9,7 @@ using AppModel.Model;
 using XmlVisualizer.Data;
 using XmlVisualizer.Models;
 
-namespace XmlVisualizer.Pages.Match
+namespace XmlVisualizer.Pages.Matches
 {
     public class DetailsModel : PageModel
     {
@@ -20,28 +20,18 @@ namespace XmlVisualizer.Pages.Match
             _context = context;
         }
 
-        public AppModel.Model.Match Match { get; set; }
+        public AppModel.Model.Matches Matches { get; set; }
 
-        [BindProperty] public string Matches_Id { get; set; }
-
-        public async Task<IActionResult> OnGetAsync(Guid? id)
+        public async Task<IActionResult> OnGetAsync(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            foreach (AppModel.Model.Matches finalsMatch in _context.History.Finals.Matches)
-            {
-                Match = finalsMatch.Match.FirstOrDefault(m => m.Id == id);
-                if (Match != null)
-                {
-                    Matches_Id = finalsMatch.Matches_id;
-                    break;
-                }
-            }
+            Matches = _context.History.Finals.Matches.FirstOrDefault(m => m.Matches_id == id);
 
-            if (Match == null)
+            if (Matches == null)
             {
                 return NotFound();
             }

@@ -16,8 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Matches\" />
     <Folder Include="wwwroot\mock\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Matches\XsltTransformation.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Matches\Serialize.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>

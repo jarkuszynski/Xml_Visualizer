@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AppModel.Model;
@@ -15,31 +16,39 @@ namespace XmlVisualizer.Data
         public ModelContext()
         {
             string filePath = @"C:\Users\Johnny\source\repos\XmlVisualizer\XmlVisualizer\wwwroot\mock\history.xml";
+            string workingDirectory = Environment.CurrentDirectory;
+            filePath = workingDirectory + "\\wwwroot\\mock\\history.xml";
             History = serializer.Deserialize(filePath);
+            //serializer.Serialize(History, workingDirectory + "\\wwwroot\\mock\\history_2.xml");
             foreach (Matches finalMatches in History.Finals.Matches)
             {
                 foreach (Match match in finalMatches.Match)
                 {
-                    match.Id = new Guid();
-                    match.Goals.Id = new Guid();
-                    match.Goals.NormalTime.Id = new Guid();
+                    match.Id = Guid.NewGuid();
+                    match.Goals.Id = Guid.NewGuid();
+                    match.Goals.NormalTime.Id = Guid.NewGuid();
                     foreach (Result result in match.Goals.NormalTime.Result)
                     {
-                        result.Id = new Guid();
+                        result.Id = Guid.NewGuid();
                     }
-                    match.Goals.Penalties.Id = new Guid();
-                    foreach (Result result in match.Goals.Penalties.Result)
+
+                    if (match.Goals._Penalties == "true")
                     {
-                        result.Id = new Guid();
+                        match.Goals.Penalties.Id = Guid.NewGuid();
+                        foreach (Result result in match.Goals.Penalties.Result)
+                        {
+                            result.Id = Guid.NewGuid();
+                        }
                     }
-                    match.Info.Id = new Guid();
-                    match.Info.PricePerTicket.Id = new Guid();
+                    
+                    match.Info.Id = Guid.NewGuid();
+                    match.Info.PricePerTicket.Id = Guid.NewGuid();
                     foreach (Payment payment in match.Info.PricePerTicket.Payment)
                     {
-                        payment.Id = new Guid();
+                        payment.Id = Guid.NewGuid();
                     }
                 }
-
+                serializer.Serialize(History, workingDirectory + "\\wwwroot\\mock\\history_2.xml");
 
             }
         }

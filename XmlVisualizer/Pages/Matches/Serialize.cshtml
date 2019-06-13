@@ -1,0 +1,16 @@
+﻿@page
+@model XmlVisualizer.Pages.Matches.SerializeModel
+
+@{
+    ViewData["Title"] = "Serialize";
+}
+
+<h2>Serialize</h2>
+
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Matches.Matches_id" />
+        <input type="submit" value="Serialize" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

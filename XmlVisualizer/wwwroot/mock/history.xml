@@ -1,4 +1,4 @@
-<history xmlns='http://exampleNamespace.org/XMLTech'>
+<history>
 
 	<leagues>
 		<league league_id="premierLeague" nationality="England">Premier League</league>
