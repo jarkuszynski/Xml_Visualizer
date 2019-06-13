@@ -19,5 +19,9 @@ namespace XmlVisualizer.Models
         public DbSet<AppModel.Model.Match> Match { get; set; }
 
         public DbSet<AppModel.Model.Matches> Matches { get; set; }
+
+        public DbSet<AppModel.Model.Club> Club { get; set; }
+
+        public DbSet<AppModel.Model.League> League { get; set; }
     }
 }

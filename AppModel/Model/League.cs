@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Serialization;
 
 namespace AppModel.Model
 {
@@ -6,6 +7,7 @@ namespace AppModel.Model
     public class League
     {
         [XmlAttribute(AttributeName = "league_id")]
+        [Key]
         public string League_id { get; set; }
         [XmlAttribute(AttributeName = "nationality")]
         public string Nationality { get; set; }
