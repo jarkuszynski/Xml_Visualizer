@@ -19,7 +19,6 @@ namespace XmlVisualizer.Data
             string workingDirectory = Environment.CurrentDirectory;
             filePath = workingDirectory + "\\wwwroot\\mock\\history.xml";
             History = serializer.Deserialize(filePath);
-            //serializer.Serialize(History, workingDirectory + "\\wwwroot\\mock\\history_2.xml");
             foreach (Matches finalMatches in History.Finals.Matches)
             {
                 foreach (Match match in finalMatches.Match)
@@ -48,8 +47,6 @@ namespace XmlVisualizer.Data
                         payment.Id = Guid.NewGuid();
                     }
                 }
-                serializer.Serialize(History, workingDirectory + "\\wwwroot\\mock\\history_2.xml");
-
             }
         }
     }
