@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+XmlVisualizer/wwwroot/mock/history_sum.xml
+XmlVisualizer/wwwroot/mock/history_serialized.xml
+XmlVisualizer/wwwroot/mock/history_sum.xhtml
